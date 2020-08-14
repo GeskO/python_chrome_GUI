@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовый интерфейс</title>
+
+    <link rel="stylesheet" href="style/style.css">
+    <link href="">
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input id="location" type="text" placeholder="Введите название города" required="">
+
+    <button id="show" onclick="display_weather()">Узнать погоду</button>
+
+    <div class="res" id="info"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        async function display_weather() {
+            let place = document.getElementById('location').value;
+            let value = await eel.get_weather(place)();
+<!--            alert(value);-->
+            document.getElementById('info').innerHTML = value;
+        }
+
+<!--        jQuery('#show').on('click', function() {-->
+<!--            display_weather();-->
+<!--        });-->
+    </script>
+</body>
+</html>
