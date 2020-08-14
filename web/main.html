@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Тестовый интерфейс</title>
@@ -17,18 +17,12 @@
 
     <div class="res" id="info"></div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         async function display_weather() {
             let place = document.getElementById('location').value;
             let value = await eel.get_weather(place)();
-<!--            alert(value);-->
             document.getElementById('info').innerHTML = value;
         }
-
-<!--        jQuery('#show').on('click', function() {-->
-<!--            display_weather();-->
-<!--        });-->
     </script>
 </body>
 </html>

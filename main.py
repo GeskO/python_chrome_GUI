@@ -1,7 +1,7 @@
 import eel
 import pyowm
 
-owm = pyowm.OWM("d86406cbd3667560013f12d40e475f56")
+owm = pyowm.OWM("API KEY")
 eel.init("web")
 
 
